@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập thông tin khách hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-header">Nhập thông tin</div>
+        
+        <div class="container">
+            <label>Họ tên:</label>
+            <input type="text" id="hoTen">
+
+            <label>Giới Tính:</label>
+            <select id="gioiTinh">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+            </select>
+
+            <label>Độ tuổi:</label>
+            <input type="text" id="doTuoi">
+    
+            <label>Số thành viên:</label>
+            <select id="soThanhVien">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+            </select>
+    
+            <label>Loại SIM:</label>
+            <select id="loaiSim">
+                <option value="Không">Không</option>
+                <option value="Viettel">Viettel</option>
+                <option value="Mobifone">Mobifone</option>
+                <option value="Vinaphone">Vinaphone</option>
+                <option value="VNMobile">VNMobile</option>
+            </select>
+
+            <label>Số điện thoại:</label>
+            <input type="text" id="soDienThoai">
+    
+            <label>Gói Wifi:</label>
+            <select id="goiWifi">
+                <option value="Không">Không</option>
+                <option value="Viettel">Viettel</option>
+                <option value="FPT">FPT</option>
+                <option value="VNPT">VNPT</option>
+            </select>
+
+            <label>Loại camera:</label>
+            <select id="Camera">
+                <option value="Không">Không</option>
+                <option value="Viettel">Viettel</option>
+                <option value="FPT">FPT</option>
+                <option value="Tự mua">Tự mua</option>
+            </select>
+    
+            <label for="chiPhiWifi">Chi phí Wifi:</label>
+            <input type="text" id="chiPhiWifi" oninput="dinhDangSoTien(this)">
+            <div class="data-buttons">
+                <button onclick="themHaiSoKhong('chiPhiWifi')">+00</button>
+                <button onclick="themBaSoKhong('chiPhiWifi')">+000</button>
+                <button onclick="resetTien('chiPhiWifi')">Reset</button>
+            </div>
+            
+            <label for="chiPhiData">Chi phí Data:</label>
+            <input type="text" id="chiPhiData" oninput="dinhDangSoTien(this)">
+            <div class="data-buttons">
+                <button onclick="themHaiSoKhong('chiPhiData')">+00</button>
+                <button onclick="themBaSoKhong('chiPhiData')">+000</button>
+                <button onclick="resetTien('chiPhiData')">Reset</button>
+            </div>
+
+            <label for="chiPhiCamera">Chi phí Camera:</label>
+            <input type="text" id="chiPhiCamera" oninput="dinhDangSoTien(this)">
+            <div class="data-buttons">
+                <button onclick="themHaiSoKhong('chiPhiCamera')">+00</button>
+                <button onclick="themBaSoKhong('chiPhiCamera')">+000</button>
+                <button onclick="resetTien('chiPhiCamera')">Reset</button>
+            </div>
+    
+            <label>Tỉnh/Thành phố:</label>
+            <select id="tinhThanh" onchange="capNhatQuanHuyen()">
+                <option value="">Chọn tỉnh/thành</option>
+                <option value="Kiên Giang">Kiên Giang</option>
+            </select>
+    
+            <label>Quận/Huyện:</label>
+            <select id="quanHuyen" onchange="capNhatPhuongXa()">
+                <option value="">Chọn quận/huyện</option>
+            </select>
+    
+            <label>Phường/Xã:</label>
+            <select id="phuongXa">
+                <option value="">Chọn phường/xã</option>
+            </select>
+
+            <label>Khu phố/ấp:</label>
+            <input type="text" id="khuPhoAp">
+
+            <label>Đường/tổ:</label>
+            <input type="text" id="duongTo">
+
+            <label>Số nhà:</label>
+            <input type="text" id="soNha">
+
+            <label>Hộp cáp:</label>
+            <select id="hopCap">
+                <option value="Khong">Không</option>
+                <option value="HopPhoiQuang">Hộp phối quang (ODF – Optical Distribution Frame)</option>
+                <option value="HopCapQuangNgoaiTroi">Hộp cáp quang treo ngoài trời</option>
+                <option value="HopChiaTinHieu">Hộp chia tín hiệu (Split box)</option>
+            </select>            
+    
+            <button onclick="luuThongTin()">Lưu thông tin</button>
+            <button onclick="chuyenTrang()">Xem dữ liệu</button>
+        </div>
+    
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

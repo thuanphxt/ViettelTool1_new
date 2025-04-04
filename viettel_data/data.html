@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách khách hàng</title>
+    <link rel="stylesheet" href="data.css">
+</head>
+<body>
+    <h1>Danh sách khách hàng</h1>
+    
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Chọn</th>
+                <th>Họ tên</th>
+                <th>Giới tính</th>
+                <th>Độ tuổi</th>
+                <th>Số thành viên</th>
+                <th>Loại SIM</th>
+                <th>Số điện thoại</th>
+                <th>Gói Wifi</th>
+                <th>Camera</th>
+                <th>Chi phí Wifi</th>
+                <th>Chi phí Data</th>
+                <th>Chi phí camera</th>
+                <th>Địa chỉ</th>
+                <th>Hộp cáp</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dữ liệu sẽ được thêm tại đây -->
+        </tbody>
+    </table>
+
+    <button onclick="xoaKhachHang()">Xóa khách hàng</button>
+    <button onclick="xuatExcel()">Xuất ra Excel</button>
+    <button onclick="chuyenVeNhapLieu()">Quay lại trang nhập liệu</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Giữ nguyên định dạng tổng thể, chỉ thay đổi kích thước */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Tránh thanh cuộn toàn bộ trang */
+}
+
+/* Điều chỉnh kích thước để phù hợp smartphone */
+.phone-frame {
+    width: 100%;
+    max-width: 390px; /* Kích thước chuẩn của smartphone */
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Header của ứng dụng */
+.phone-header {
+    background-color: #d60000;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 20px;
+}
+
+/* Khu vực nhập thông tin */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #d60000;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    overflow-y: auto;
+    height: 85%;
+}
+
+/* Nhãn và input */
+label {
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Các nút bấm */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: white;
+    color: #d60000;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #d60000;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Hiệu ứng trang trí mùa xuân */
+.spring-decor {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url('hoa-mai.png'); /* Ảnh trang trí mùa xuân */
+    background-size: cover;
+}
+
+.data-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.data-buttons input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.data-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #fff;
+    color: #d60000;
+    border: 2px solid #d60000;
+    width: 30%;
+}
+
+.data-buttons button:hover {
+    background-color: #d60000;
+    color: #fff;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
